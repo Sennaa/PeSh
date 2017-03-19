@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="latestWebApp:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/latestWebApp_jar</output-path>
+    <root id="archive" name="latestWebApp.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="latestWebApp" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../SQLite_jdbc/sqlite-jdbc-3.8.11.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

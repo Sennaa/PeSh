@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Personal Shopper</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_persona_select">PersonaSelectActivity</string>
+    <string name="title_activity_tag_selection">TagSelectionActivity</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_route_calculation">RouteCalculationActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_persona_choice">PersonaChoiceActivity</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

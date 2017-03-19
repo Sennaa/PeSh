@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>PeSh - Kies Persona</title>
+
+    <!-- Bootstrap -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<div class="jumbotron">
+    <h2><center>Selecteer de persona waarmee je jezelf het beste kan identificeren</center></h2>
+	<center>
+	<table>
+	 <tr>
+	  <th>
+		<div class="persona panel panel-default" style="width:500px; max-width=800px">
+		 <!-- Default panel contents -->
+		 <div id="Persona 1" class="personaName panel-heading" style="background-color:#3399ff; max-width:800px;">Persona 1</div>
+		 <table class="table">
+		  <tr>
+		   <th>
+		    <b>Je houdt van:</b>
+		   </th>
+		   <th>
+		    <b>Je houdt niet van:</b>
+		   </th>
+		  </tr>
+		  <tr>
+		   <th>
+		    <i>Elektronica</i>
+		   </th>
+		   <th>
+		    <i>Dameskleding</i>
+		   </th>
+		  </tr>
+		  <tr>
+		   <th>
+		    <i>Telecom</i>
+		   </th>
+		   <th>
+		    <i>Kindermode</i>
+		   </th>
+		  </tr>
+		  <tr>
+		   <th>
+		    <i>Accessoires</i>
+		   </th>
+		   <th>
+		   </th>
+		  </tr>
+		 </table>
+		</div>
+		<div class="persona panel panel-default" style="width:500px; max-width=800px"> 
+		 <div id="Persona 2" class="personaName panel-heading" style="background-color:#3399ff; max-width:800px;">Persona 2</div>
+		  <table class="table">
+		   <tr>
+		    <th>
+		     <b>Je houdt van:</b>
+		    </th>
+		    <th>
+		     <b>Je houdt niet van:</b>
+		    </th>
+		   </tr>
+		   <tr>
+		    <th>
+		     <i>Dameskleding</i>
+		    </th>
+		    <th>
+		     <i>Elektronica</i>
+		    </th>
+		   </tr>
+		   <tr>
+		    <th>
+		     <i>Kindermode</i>
+		    </th>
+		    <th>
+		     <i>Telecom</i>
+		    </th>
+		   </tr>
+		   <tr>
+		    <th>
+		     <i></i>
+		    </th>
+		    <th>
+		     <i>Accessoires</i>
+		    </th>
+		   </tr>
+		  </table>
+		 </div>
+		 <div class="persona panel panel-default" style="width:500px; max-width=800px"> 
+		 <div id="Persona 3" class="personaName panel-heading" style="background-color:#3399ff; max-width:800px;">Persona 3</div>
+		  <table class="table">
+		   <tr>
+		    <th>
+		     <b>Je houdt van:</b>
+		    </th>
+		    <th>
+		     <b>Je houdt niet van:</b>
+		    </th>
+		   </tr>
+		   <tr>
+		    <th>
+		     <i>Dameskleding</i>
+		    </th>
+		    <th>
+		     <i>Elektronica</i>
+		    </th>
+		   </tr>
+		   <tr>
+		    <th>
+		     <i>Kindermode</i>
+		    </th>
+		    <th>
+		     <i>Telecom</i>
+		    </th>
+		   </tr>
+		   <tr>
+		    <th>
+		     <i></i>
+		    </th>
+		    <th>
+		     <i>Accessoires</i>
+		    </th>
+		   </tr>
+		  </table>
+		 </div>
+	  </th>
+	 </tr>
+	</table>
+	
+  
+	<!--Bevestig antwoorden-->
+	<form method="post">
+	<button id="indexButton" name="personaButton" class="btn btn-default" style="margin-top: 2cm; background-color:lightblue" value="">Bevestig persona</button>
+	</form>
+	
+	</center>
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(".persona").click(function() {
+			var persona_name = $(this).find(".personaName").text();
+			var elements = document.getElementsByClassName("personaName");
+			var green = false;
+			if (document.getElementById(persona_name).style.backgroundColor=="green") {
+				green = true;
+			}
+			for (var i = 0 ; i < elements.length; i++) {
+				elements[i].style.backgroundColor="#3399ff";
+			}
+			if (!green) {
+				document.getElementById(persona_name).style.backgroundColor="green";
+			}
+			
+		});
+	});
+	
+	document.getElementById("indexButton").onclick = function() {
+		var chosenPersona;
+		var personas = document.getElementsByClassName("personaName");
+		for (var i = 0 ; i < personas.length ; i++) {
+			if (personas[i].style.backgroundColor=="green") {
+				chosenPersona = personas[i].innerHTML;
+			}
+		}
+		document.getElementById("indexButton").value=chosenPersona.toString();
+	};
+	</script>
+  </body>
+</html>

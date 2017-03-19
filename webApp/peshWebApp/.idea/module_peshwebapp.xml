@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_peshwebapp" default="compile.module.peshwebapp">
+  <dirname property="module.peshwebapp.basedir" file="${ant.file.module_peshwebapp}"/>
+  
+  <property name="module.jdk.home.peshwebapp" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.peshwebapp" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.peshwebapp" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.peshwebapp" value="-encoding UTF-8 -source 1.6 -target 1.6 ${compiler.args}"/>
+  
+  <property name="peshwebapp.output.dir" value="undefined"/>
+  <property name="peshwebapp.testoutput.dir" value="undefined"/>
+  
+  <path id="peshwebapp.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="peshwebapp.module.production.classpath"/>
+  
+  <path id="peshwebapp.runtime.production.module.classpath"/>
+  
+  <path id="peshwebapp.module.classpath"/>
+  
+  <path id="peshwebapp.runtime.module.classpath"/>
+  
+  
+  <patternset id="excluded.from.module.peshwebapp">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.peshwebapp">
+    <patternset refid="excluded.from.module.peshwebapp"/>
+  </patternset>
+  
+  
+  <target name="compile.module.peshwebapp" depends="compile.module.peshwebapp.production,compile.module.peshwebapp.tests" description="Compile module peshWebApp"/>
+  
+  <target name="compile.module.peshwebapp.production" depends="register.custom.compilers" description="Compile module peshWebApp; production classes"/>
+  
+  <target name="compile.module.peshwebapp.tests" depends="register.custom.compilers,compile.module.peshwebapp.production" description="compile module peshWebApp; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.peshwebapp" description="cleanup module">
+    <delete dir="${peshwebapp.output.dir}"/>
+    <delete dir="${peshwebapp.testoutput.dir}"/>
+  </target>
+</project>

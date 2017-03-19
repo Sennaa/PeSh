@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<div class="jumbotron">
+    <h2><center>Beantwoord de vragen voor de volgende twee routes langs winkels.</center></h2>
+	<center>
+	<table>
+	 <tr>
+	  <th width="250">
+		<div class="left panel panel-default">
+		 <!-- Default panel contents -->
+		 <div id="left" class="panel-heading" style="background-color: #3399ff">Route 1 (duur: 30 minuten)</div>
+
+		  <!-- List group -->
+		 <ul class="list-group">
+			<li class="list-group-item">Cras justo odio</li>
+			<li class="list-group-item">Dapibus ac facilisis in</li>
+			<li class="list-group-item">Morbi leo risus</li>
+			<li class="list-group-item">Porta ac consectetur ac</li>
+			<li class="list-group-item">Vestibulum at eros</li>
+		 </ul>
+		</div>
+	  </th>
+	  <th width="150">
+	  </th>
+	  <th width="250">
+		<div class="right panel panel-default">
+		 <!-- Default panel contents -->
+		 <div id="right" class="panel-heading" style="background-color: #3399ff">Route 2 (duur: 30 minuten)</div>
+
+		 <!-- List group -->
+		 <ul class="list-group">
+			<li class="list-group-item">Cras justo odio</li>
+			<li class="list-group-item">Dapibus ac facilisis in</li>
+			<li class="list-group-item">Morbi leo risus</li>
+			<li class="list-group-item">Porta ac consectetur ac</li>
+			<li class="list-group-item">Vestibulum at eros</li>
+		 </ul>
+		</div>
+	  </th>
+	 </tr>
+	</table>
+	<div class="panel panel-default" style="width:500px">
+	 <div class="panel-body"><h5>1. Selecteer de route die het meest persoonlijk is.</h5></div>
+	</div>
+	
+	
+	<!--Bevestig antwoorden-->
+	<form method="post">
+	<button id="vragenlijst1Button" name="vragenlijstButton" class="btn btn-default" style="background-color:lightblue" value="">Bevestig antwoorden</button>
+	</form>
+	
+	</center>
+	</div>
+	
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(".left").click(function() {
+			document.getElementById("left").style.backgroundColor="green";
+			document.getElementById("right").style.backgroundColor="#3399ff";
+		});
+		$(".right").click(function() {
+			document.getElementById("right").style.backgroundColor="green";
+			document.getElementById("left").style.backgroundColor="#3399ff";
+		});
+	});
+	
+	document.getElementById("vragenlijst1Button").onclick = function() {
+		if (document.getElementById("right").style.backgroundColor=="green") {
+			document.getElementById("vragenlijst1Button").value="right";
+		}
+		else if (document.getElementById("left").style.backgroundColor=="green") {
+			document.getElementById("vragenlijst1Button").value="left";
+		}
+		else {
+			alert("Selecteer een van de twee routes!")
+		}
+	};
+	</script>
+	
+  </body>
+</html>

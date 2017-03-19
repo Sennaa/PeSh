@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>PeSh - Index</title>
+
+    <!-- Bootstrap -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet> -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<div class="jumbotron">
+	<center>
+	<h3>Over het experiment (lees dit eerst zorgvuldig door)</h3>
+	<div class="panel panel-default" style="max-width: 800px">
+	<div class="panel-body">
+	<p>In dit experiment worden routes langs winkels in het centrum van Nijmegen aanbevolen.
+	Je krijgt zometeen een aantal keer twee lijsten te zien die elk een route bevatten.
+	Een route wordt weergegeven als een lijst van namen van winkels in Nijmegen, met daarbij vermeld hoe lang de route duurt.
+	Per route wordt een aantal vragen gesteld.
+	</p>
+	<p>
+	De verkregen data uit dit experiment wordt anoniem gebruikt en uitsluitend voor wetenschappelijke doeleinden.
+	Door deel te nemen aan het experiment verklaar je dat je op duidelijke wijze bent ingelicht over de methode en doel van het onderzoek.
+	Je stemt dan geheel vrijwillig in met deelname aan het onderzoek en behoudt het recht om op elk moment zonder opgaaf van redenen je deelname aan dit onderzoek te beeindigen.
+	</p>
+	<p>
+	Voor dat het experiment begint, moet een persona worden gekozen.
+	Een persona is een fictief persoon met een bepaalde stijl.
+	Deze stijl geeft de voorkeur aan van deze fictieve persoon voor een type winkels.
+	In het volgende scherm wordt een lijst met persona's getoond.
+	Selecteer uit deze lijst de persona waarmee je jezelf het meest identificeert.
+	</p>
+	<button value="Kies persona" class="btn btn-default" style="background-color:lightblue" id="indexButton">Kies persona</button>
+	</div>
+	</div>
+	
+	</center>
+	
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript">
+	document.getElementById("indexButton").onclick = function() {
+		location.href="/persona.html";
+	}
+	</script>
+	
+  </body>
+</html>
